@@ -3,6 +3,7 @@
     {{ titre }}
 
     <div>
+      <h2>tâches à faire</h2>
       <ul>
         <li v-for="task in tasks" :key="task.id">
           <div v-if="!task.state">
@@ -18,6 +19,8 @@
           </div>
         </li>
       </ul>
+
+      <h2>tâches faites</h2>
 
       <ul>
         <li v-for="task in tasks" :key="task.id">
@@ -40,11 +43,6 @@ export default {
       titre: "TodoList",
       task: null,
       tasks: [],
-      tasksCheck: [
-        { id: 45953, todo: "faire la vaisselle" },
-        { id: 4546166, todo: "faire le ménage" },
-      ],
-      tasksCheck2: [],
       check: false,
       taskToEdit: null,
     };
@@ -70,13 +68,10 @@ export default {
       this.taskToEdit = null;
       this.check = false;
     },
-  },
-  mounted() {
-    console.log("ancien tableau : " + this.tasksCheck);
 
-    this.tasksCheck2 = this.tasksCheck.filter((t) => t.id !== 4546166);
-
-    console.log("nouveau tableau : " + this.tasksCheck2);
+    permute(task) {
+      task.state === false ? (task.state = true) : (task.state = false);
+    },
   },
 };
 </script>
