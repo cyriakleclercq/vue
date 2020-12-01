@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Todo />
+    <ComposantDynamique />
   </div>
 </template>
 
 <script>
-import Todo from "./components/Todo";
+import ComposantDynamique from "./components/ComposantDynamique";
 
 export default {
   name: "App",
   components: {
-    Todo,
+    ComposantDynamique,
   },
 };
 </script>
