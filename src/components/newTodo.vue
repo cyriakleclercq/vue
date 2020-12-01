@@ -28,6 +28,11 @@ export default {
       this.tasks = this.tasks.filter((t) => t.id != task.id);
     },
   },
+  provide() {
+    return {
+      message: "message en provide",
+    };
+  },
 };
 </script>
 

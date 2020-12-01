@@ -15,6 +15,7 @@ export default {
     permute: Boolean,
     html: String,
   },
+  inject: ["message"],
   methods: {
     deleteTaskButton() {
       this.$emit("deleteTaskButton", this.task);
@@ -25,6 +26,10 @@ export default {
     permuteTaskButton() {
       this.$emit("permuteTaskButton", this.task);
     },
+  },
+
+  created() {
+    console.log(this.message);
   },
 };
 </script>
