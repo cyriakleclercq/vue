@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <ComposantDynamique />
+    <NewTodo />
   </div>
 </template>
 
 <script>
-import ComposantDynamique from "./components/ComposantDynamique";
+import NewTodo from "./components/newTodo";
 
 export default {
   name: "App",
   components: {
-    ComposantDynamique,
+    NewTodo,
   },
 };
 </script>
