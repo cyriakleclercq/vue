@@ -4,7 +4,9 @@ const monStore = {
         message: "Message dans me store",
     },
     getters: {},
-    mutations: {},
+    mutations: {
+        increment: state => state.count++
+    },
     actions: {}
 }
 

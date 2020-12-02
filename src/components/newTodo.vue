@@ -2,6 +2,11 @@
   <div>
     <Ajout @newtask="add" />
     <Affichage :tasks="tasks" @deleteTaskAffichage="deleteTask" />
+
+    <div>
+      {{ count }}
+      <button @click="incCount">incrémente</button>
+    </div>
   </div>
 </template>
 
@@ -17,6 +22,7 @@ export default {
   data() {
     return {
       tasks: [],
+      count: 0,
     };
   },
   methods: {
@@ -27,11 +33,20 @@ export default {
     deleteTask(task) {
       this.tasks = this.tasks.filter((t) => t.id != task.id);
     },
+
+    incCount() {
+      this.$store.commit("increment");
+      this.count = this.$store.state.monStore.count;
+    },
   },
   provide() {
     return {
       message: "message en provide",
     };
+  },
+  created() {
+    console.log(this.$store);
+    this.count = this.$store.state.monStore.count;
   },
 };
 </script>
