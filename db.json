@@ -1,19 +1,32 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "nom": "Dupont",
+      "prenom": "Marc",
+      "age": 45,
+      "date": "25 janvier 2005"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "nom": "Leur",
+      "prenom": "Anne",
+      "age": 55,
+      "date": "20 aout 2000"
+    },
+    {
+      "id": 3,
+      "nom": "dsqdsq",
+      "prenom": "qsdqd",
+      "age": "41",
+      "date": "Wed Dec 02 2020 17:08:16 GMT+0100 (heure normale d’Europe centrale)"
+    },
+    {
+      "id": 4,
+      "nom": "dsqdsq",
+      "prenom": "qsdqd",
+      "age": "41",
+      "date": "Wed Dec 02 2020 17:08:17 GMT+0100 (heure normale d’Europe centrale)"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
